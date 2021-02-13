@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+	<p>
+		<font face='Times New Roman' size='20' color='black'>Hitung Luas Segitiga</font>
+	</p>
+	<form name='luassegitiga' method='post'>
+		<table>
+			<tr>
+				<td>Alas</td>
+				<td>:</td>
+				<td><input type='text' name='alas' placeholder="-" onchange='hitungluas();'></td>
+			</tr>
+			<tr>
+				<td>Tinggi</td>
+				<td>:</td>
+				<td><input type='text' name='tinggi' placeholder="-" onchange='hitungluas();'></td>
+			</tr>
+			<tr>
+				<td>Luas</td>
+				<td>:</td>
+				<td> <input type='text' name='luas' onchange='hitungluas();'></td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script type='text/javascript'>
+function hitungluas(){
+	var alas = document.forms['luassegitiga']['alas'].value;
+	alas = parseInt(alas);
+	var tinggi = document.forms['luassegitiga']['tinggi'].value;
+	tinggi = parseInt(tinggi);
+	var luas = (alas*tinggi)/2;
+	document.forms['luassegitiga']['luas'].value = luas;
+}
+</script>
+</html>
